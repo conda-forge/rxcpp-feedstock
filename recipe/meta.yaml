@@ -19,7 +19,7 @@ source:
 #          ignore it there.
 
 build:
-  number: 0
+  number: 1
   script:
     - set -ex  # conda-build 2 doesn't do this automatically  # [unix]
     - cd projects
@@ -40,19 +40,16 @@ build:
     - nmake install  # [win]
     - if errorlevel 1 exit 1  # [win]
   skip: true  # [win and py27]
+  features:
+    - vc 9   # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
 
 requirements:
   build:
     - cmake
     - toolchain
     - python  # [win]
-    - vc 9    # [win and py27]
-    - vc 10   # [win and py34]
-    - vc 14   # [win and py>=35]
-  run:
-    - vc 9   # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
   # NOTE: rxcpp is header-only, but we still need the vc version dance because
   #       the build system doesn't work on vc9. Not sure if the actual library
   #       works or not.
