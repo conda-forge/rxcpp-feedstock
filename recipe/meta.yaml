@@ -19,7 +19,7 @@ source:
 #          ignore it there.
 
 build:
-  number: 2
+  number: 3
   script:
     - set -ex  # conda-build 2 doesn't do this automatically  # [unix]
     - cd projects
@@ -44,6 +44,8 @@ build:
 requirements:
   build:
     - cmake
+    - {{ compiler('cxx') }}
+  host:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
