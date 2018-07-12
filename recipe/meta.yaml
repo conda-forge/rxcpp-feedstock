@@ -44,11 +44,8 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('cxx') }}
-  host:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
   # NOTE: rxcpp is header-only, but we still need the vc version dance because
   #       the build system doesn't work on vc9. Not sure if the actual library
   #       works or not.
