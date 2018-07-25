@@ -19,7 +19,7 @@ source:
 #          ignore it there.
 
 build:
-  number: 1
+  number: 3
   script:
     - set -ex  # conda-build 2 doesn't do this automatically  # [unix]
     - cd projects
@@ -39,17 +39,13 @@ build:
     - make install   # [unix]
     - nmake install  # [win]
     - if errorlevel 1 exit 1  # [win]
-  skip: true  # [win and py27]
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py>=35]
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
     - cmake
-    - toolchain
-    - python  # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   # NOTE: rxcpp is header-only, but we still need the vc version dance because
   #       the build system doesn't work on vc9. Not sure if the actual library
   #       works or not.
@@ -67,7 +63,7 @@ about:
   summary: 'Reactive Extensions for C++'
   description: |
     The Reactive Extensions for C++ (RxCpp) is a library of algorithms for
-    values-distributed-in-time. 
+    values-distributed-in-time.
   doc_url: http://reactive-extensions.github.io/RxCpp/
   dev_url: https://github.com/Reactive-Extensions/RxCpp
 

@@ -16,14 +16,16 @@ values-distributed-in-time.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rxcpp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rxcpp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/rxcpp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rxcpp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rxcpp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rxcpp-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/rxcpp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/rxcpp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/rxcpp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/rxcpp-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/rxcpp-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/rxcpp-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/rxcpp/badges/version.svg)](https://anaconda.org/conda-forge/rxcpp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/rxcpp/badges/downloads.svg)](https://anaconda.org/conda-forge/rxcpp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-rxcpp-green.svg)](https://anaconda.org/conda-forge/rxcpp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/rxcpp.svg)](https://anaconda.org/conda-forge/rxcpp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/rxcpp.svg)](https://anaconda.org/conda-forge/rxcpp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/rxcpp.svg)](https://anaconda.org/conda-forge/rxcpp) |
 
 Installing rxcpp
 ================
