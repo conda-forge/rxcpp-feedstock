@@ -19,7 +19,7 @@ source:
 #          ignore it there.
 
 build:
-  number: 3
+  number: 1003
   script:
     - set -ex  # conda-build 2 doesn't do this automatically  # [unix]
     - cd projects
