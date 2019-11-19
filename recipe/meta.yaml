@@ -21,7 +21,6 @@ source:
 build:
   number: 0
   script:
-    - set -ex  # conda-build 2 doesn't do this automatically  # [unix]
     - cd projects
     - mkdir build
     - cd build
@@ -46,9 +45,7 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  # NOTE: rxcpp is header-only, but we still need the vc version dance because
-  #       the build system doesn't work on vc9. Not sure if the actual library
-  #       works or not.
+  # NOTE: rxcpp is header-only, but we still need compilers, etc. to install
 
 test:
   commands:
