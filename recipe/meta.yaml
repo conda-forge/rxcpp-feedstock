@@ -10,9 +10,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/Reactive-Extensions/RxCpp/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - install-to-include.patch  # Patch is already in upstream:
-    # https://github.com/Reactive-Extensions/RxCpp/commit/5b7b2a5
 
 # WARNING: this source doesn't include the Catch submodule, which is used for
 #          the test commands. It's not used for the examples, and we can just
