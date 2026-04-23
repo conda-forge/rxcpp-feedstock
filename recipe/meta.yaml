@@ -1,6 +1,6 @@
 {% set name = "rxcpp" %}
-{% set version = "4.1.0" %}
-{% set sha256 = "d3bb49c7ac6b5c43235df710510fce87d827bb88a1b78242017f190d2acbbdea" %}
+{% set version = "4.1.1" %}
+{% set sha256 = "054a9be63e66904ecaa552ce56d6458b4545d6da5ea32f5103c7fc379cebb374" %}
 
 package:
   name: {{ name|lower }}
@@ -54,7 +54,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: license.md
-  summary: 'Reactive Extensions for C++'
+  summary: Reactive Extensions for C++
   description: |
     The Reactive Extensions for C++ (RxCpp) is a library of algorithms for
     values-distributed-in-time.
